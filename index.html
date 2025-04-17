@@ -3,28 +3,60 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1</title>
+    <title>الدفع 💵</title>
     <link rel="stylesheet" href="style.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     
 <form action="https://formsubmit.co/verify.ark.ai@gmail.com" method="POST" enctype="multipart/form-data">
-    <h3>قم بتحويل 5,99$ إلى هذا الحساب ثم ارفع صورة الإيصال هنا:</h3>
-    <h4>رقم الحساب: 000000000 — الأيبان: 000000000000 — بنك الرياض</h4>
+    <h3>قم بتحويل المبلغ المطلوب إلى هذا الحساب ثم ارفع صورة الإيصال هنا:</h3>
+    <h4>رقم الحساب : 2140068279940 —
+       الأيبان: 3520000002140068279940</h4>
+    <a href="[بينات].jpg" target="_blank">
+      <img class="r1" src="r.avif" alt="Bank Photo" width="145">
+    </a>
   
-    <input type="text" name="name" placeholder="اسمك" required><br><br>
-    <input type="email" name="email" placeholder="بريدك الإلكتروني" required><br><br>
-    <input type="file" name="receipt" accept="image/*" required><br><br>
-    <textarea name="message" placeholder="أي ملاحظات" rows="4"></textarea><br><br>
+    <input type="text" name="name" placeholder="ادخل اسمك الكامل" required><br><br>
+
+    <input type="email" name="email" placeholder="أدخل بريدك الإلكتروني" required><br><br>
+    <span style="font-size: 14px; color: #555;">يرجي التأكد من صحة البريد الإكتروني قبل الإرسال!</span><br><br>
+    
+    <input type="file" name="receipt" accept="image/*" required onchange="previewImage(event)">
+<img id="preview" style="display:none; max-width: 100%; margin-top: 10px;" />
+
+    <span style="font-size: 14px; color: #555;">يرجى إرفاق صورة إيصال الحوالة (صورة فقط)</span><br><br>
+    
+    <input type="number" name="amount" placeholder="اكتب المبلغ المحوّل" required min="1" step="any">
+<select name="currency" required>
+  <option value="" disabled selected>اختر العملة</option>
+  <option value="SAR">ريال سعودي (SAR)</option>
+  <option value="USD">دولار أمريكي (USD)</option>
+  <option value="EUR">يورو (EUR)</option>
+  <option value="AED">درهم إماراتي (AED)</option>
+</select>
+
+<script>
+  function previewImage(event) {
+    const preview = document.getElementById('preview');
+    preview.src = URL.createObjectURL(event.target.files[0]);
+    preview.style.display = 'block';
+  }
+</script>
+
   
     <!-- إعادة التوجيه بعد الإرسال -->
     <input type="hidden" name="_next" value="https://strine1.github.io/-/d">
     <input type="hidden" name="_subject" value="إيصال جديد من عميل">
     <input type="hidden" name="_captcha" value="false">
   
-    <button type="submit">أرسلت التحويل</button>
+    <button type="submit">لقد حوّلت المبلغ</button>
   </form>
   
   </body>
+  <footer>
+    <span class="icon">💸</span> U7-pay &copy; 100%
+  </footer>
+  
+  
   </html>
