@@ -27,12 +27,12 @@ body, html {
 /* نص متحرك */
 .animated-text {
     font-size: 28px;
-    color: rgb(31, 31, 31);
+    color: rgb(255, 255, 255);
     text-align: center;
     font-weight: bold;
     position: relative;
     animation: textAnimation 7s ease-in-out infinite;
-    -webkit-text-stroke: 1px rgb(250, 250, 250);
+    -webkit-text-stroke: 1px rgb(38, 38, 38);
 }
 
 @keyframes backgroundAnimation {
