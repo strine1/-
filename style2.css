@@ -27,7 +27,7 @@ body, html {
 /* نص متحرك */
 .animated-text {
     font-size: 28px;
-    color: rgb(24, 24, 24);
+    color: rgb(31, 31, 31);
     text-align: center;
     font-weight: bold;
     position: relative;
